@@ -43,3 +43,20 @@ Install the required libraries:
 3. Fine-tune the Pegasus model using the provided training script (`train.py`). This script defines the training parameters, data loading, and fine-tuning process.
 4. Evaluate the model on the test set using the evaluation script (`evaluate.py`). This script calculates the ROUGE scores to measure the model's performance.
 5. Use the fine-tuned model for inference on new dialogues.
+
+## Challanges : 
+
+The dialogues are huge in the dataset and frequently face CUDA out of memory errors , that's we used Memory fragmentation 
+
+What is memory fragmentation?
+
+Imagine your GPU memory as a parking lot. When you first start, it's empty and you can park large vehicles (tensors) easily. However, as you allocate and deallocate memory (cars entering and leaving), the free space becomes fragmented into smaller, non-contiguous chunks. This makes it difficult to find a single, large space for a new, big tensor, even if there's enough total free space available. This leads to the "CUDA out of memory" error.
+
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True.
+
+This environment variable is a way to fine-tune how PyTorch manages memory allocation on your NVIDIA GPU. It's specifically designed to address a common issue called memory fragmentation.
+
+How does expandable_segments:True help?
+
+This setting aims to mitigate fragmentation by enabling a feature called "expandable segments" within the PyTorch CUDA memory allocator. With expandable segments enabled, the allocator can try to merge these smaller free chunks into larger blocks when a large allocation request comes in. This reduces fragmentation and allows PyTorch to use the available GPU memory more efficiently.
