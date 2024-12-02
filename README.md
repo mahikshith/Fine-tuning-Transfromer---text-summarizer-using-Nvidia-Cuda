@@ -1,8 +1,4 @@
-# Fine-tuning-Transfromer - text-summarizer-using-Nvidia-Cuda
-
-To fine-tune a pre-trained Transformer-based text summarization model on custom data using an NVIDIA CUDA-enabled GPU.
-
-### Fine-tuning Pegasus for Dialogue Summarization
+# Fine-tuning Pegasus for Dialogue Summarization
 
 This project demonstrates how to fine-tune a pre-trained Pegasus model for dialogue summarization using the SAMSum dataset. It leverages the Hugging Face Transformers library and an NVIDIA CUDA-enabled GPU for accelerated training.
 
