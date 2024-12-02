@@ -10,6 +10,8 @@ To create a model capable of generating concise and informative summaries of dia
 
 The project utilizes the [SAMSum dataset](https://huggingface.co/datasets/Samsung/samsum) from Hugging Face Datasets. This dataset contains dialogues and their corresponding summaries, making it suitable for training a dialogue summarization model.
 
+Dataset contains ID , Dialogue (original text) and summary of the text
+
 ## Model
 
 The [Pegasus model](https://huggingface.co/google/pegasus-cnn_dailymail) from Google is employed as the base model for fine-tuning. Pegasus is a Transformer-based model specifically designed for abstractive text summarization, making it well-suited for this task.
