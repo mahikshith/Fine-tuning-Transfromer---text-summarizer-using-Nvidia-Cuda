@@ -6,6 +6,8 @@ This project demonstrates how to fine-tune a pre-trained Pegasus model for dialo
 
 To create a model capable of generating concise and informative summaries of dialogues. This is achieved by fine-tuning a pre-trained Pegasus model on the SAMSum dataset, a collection of dialogues with human-written summaries.
 
+## ETL pipeline and end to end deployment : https://github.com/mahikshith/Transformer-Text-Summarizer-Fine-tuning-with-ETL-pipeline-and-Deployment
+
 ## Dataset
 
 The project utilizes the [SAMSum dataset](https://huggingface.co/datasets/Samsung/samsum) from Hugging Face Datasets. This dataset contains dialogues and their corresponding summaries, making it suitable for training a dialogue summarization model.
